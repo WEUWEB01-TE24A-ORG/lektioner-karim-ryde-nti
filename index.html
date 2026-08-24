@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En rolig introduktion till HTML-taggar.">
+    <title>HTML-klubben</title>
+    <style>
+        :root {
+            --ink: #17233c;
+            --paper: #fffaf0;
+            --yellow: #ffd166;
+            --coral: #ef6f61;
+            --blue: #5ec8e5;
+            --green: #9bd18b;
+            --shadow: 0 8px 0 rgba(23, 35, 60, 0.13);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            background: var(--paper);
+            font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 4rem 1.5rem 3.5rem;
+            text-align: center;
+            background: var(--yellow);
+            border-bottom: 4px solid var(--ink);
+        }
+
+        header p {
+            max-width: 38rem;
+            margin: 1rem auto 0;
+            font-size: 1.15rem;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.1;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2.7rem, 8vw, 5.5rem);
+            letter-spacing: 0;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--ink);
+        }
+
+        nav a {
+            padding: 0.45rem 0.9rem;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid white;
+            border-radius: 999px;
+        }
+
+        nav a:hover {
+            color: var(--ink);
+            background: white;
+        }
+
+        main {
+            width: min(1100px, 92%);
+            margin: 3rem auto;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .intro {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .card,
+        figure,
+        form,
+        table {
+            box-shadow: var(--shadow);
+            border: 3px solid var(--ink);
+            border-radius: 12px;
+        }
+
+        .card {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .sticker {
+            padding: 2rem;
+            text-align: center;
+            background: var(--coral);
+            transform: rotate(2deg);
+        }
+
+        .sticker span {
+            display: block;
+            font-size: 4rem;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.65rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tag-cloud li {
+            padding: 0.4rem 0.7rem;
+            background: var(--blue);
+            border-radius: 8px;
+            font-family: monospace;
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        article {
+            padding: 1.2rem;
+            background: var(--green);
+            border: 3px solid var(--ink);
+            border-radius: 12px;
+        }
+
+        figure {
+            margin: 0 0 1rem;
+            overflow: hidden;
+            background: var(--blue);
+        }
+
+        figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            padding: 0.75rem 1rem;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            overflow: hidden;
+            border-spacing: 0;
+            background: white;
+        }
+
+        th,
+        td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 2px solid var(--ink);
+        }
+
+        th {
+            background: var(--blue);
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        form {
+            display: grid;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: white;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            color: var(--ink);
+            font: inherit;
+            border: 2px solid var(--ink);
+            border-radius: 7px;
+        }
+
+        textarea {
+            min-height: 7rem;
+            resize: vertical;
+        }
+
+        button {
+            cursor: pointer;
+            font-weight: bold;
+            background: var(--yellow);
+        }
+
+        button:hover {
+            background: var(--coral);
+        }
+
+        footer {
+            padding: 2rem 1.5rem;
+            text-align: center;
+            background: var(--ink);
+            color: white;
+        }
+
+        footer a {
+            color: var(--yellow);
+        }
+
+        @media (max-width: 700px) {
+
+            .intro,
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            .sticker {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="hem">
+        <h1>HTML-klubben <span aria-hidden="true">🎈</span></h1>
+        <p>En liten, färgglad sida.</p>
+    </header>
+
+    <nav aria-label="Huvudmeny">
+        <a href="#taggar">Taggar</a>
+        <a href="#exempel">Exempel</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <main>
+        <section class="intro" aria-labelledby="valkommen">
+            <div class="card">
+                <h2 id="valkommen">Välkommen till webben!</h2>
+                <p>HTML är skelettet i en webbsida. Med <strong>taggar</strong> berättar vi vad innehållet är.</p>
+                <p>Det här är <em>kursivt</em>, det här är <mark>markerat</mark> och här är en <a
+                        href="https://developer.mozilla.org/sv-SE/docs/Web/HTML" target="_blank" rel="noreferrer">länk
+                        till mer HTML</a>.</p>
+                <hr>
+                <p><small>Tips: högerklicka på sidan och välj “Visa sidkälla”.</small></p>
+            </div>
+            <aside class="sticker" aria-label="Rolig hälsning"><span>🚀</span>
+                <h2>Bygg något kul!</h2>
+                <p>En tagg i taget.</p>
+            </aside>
+        </section>
+
+        <section id="taggar" aria-labelledby="taggar-rubrik">
+            <h2 id="taggar-rubrik">Taggar i den här sidan</h2>
+            <ul class="tag-cloud">
+                <li>&lt;h1&gt;</li>
+                <li>&lt;p&gt;</li>
+                <li>&lt;a&gt;</li>
+                <li>&lt;img&gt;</li>
+                <li>&lt;ul&gt;</li>
+                <li>&lt;table&gt;</li>
+                <li>&lt;form&gt;</li>
+                <li>&lt;footer&gt;</li>
+            </ul>
+            <ol>
+                <li>Välj en idé.</li>
+                <li>Skriv HTML.</li>
+                <li>Öppna sidan och testa!</li>
+            </ol>
+        </section>
+
+        <section id="exempel" aria-labelledby="exempel-rubrik">
+            <h2 id="exempel-rubrik">Tre små exempel</h2>
+            <div class="columns">
+                <article>
+                    <h3>Bild</h3>
+                    <figure><img
+                            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80"
+                            alt="En färgglad gammal spelkonsol">
+                        <figcaption>En bild med bildtext.</figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <h3>Tabell</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tagg</th>
+                                <th>Gör</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&lt;h1&gt;</td>
+                                <td>Rubrik</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;p&gt;</td>
+                                <td>Paragraf</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;button&gt;</td>
+                                <td>Knapp</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+                <article>
+                    <h3>Detaljer</h3>
+                    <details>
+                        <summary>Klicka här!</summary>
+                        <p>Överraskning! <code>&lt;details&gt;</code> kan visa och gömma innehåll.</p>
+                    </details>
+                    <blockquote>“Det bästa sättet att lära sig är att prova.”</blockquote>
+                </article>
+            </div>
+        </section>
+
+        <section id="kontakt" aria-labelledby="kontakt-rubrik">
+            <h2 id="kontakt-rubrik">Skicka en hälsning</h2>
+            <form>
+                <div><label for="namn">Ditt namn</label><input id="namn" name="namn" type="text"
+                        placeholder="Skriv ditt namn" required></div>
+                <div><label for="humor">Hur roligt är HTML?</label><select id="humor" name="humor">
+                        <option>Superkul!</option>
+                        <option>Ganska kul</option>
+                        <option>Jag behöver mer kaffe</option>
+                    </select></div>
+                <div><label for="meddelande">Meddelande</label><textarea id="meddelande" name="meddelande"
+                        placeholder="Säg hej..."></textarea></div>
+                <button type="submit">Skicka hälsningen ✨</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Byggd med HTML, CSS och nyfikenhet.</p><a href="#hem">Till toppen ↑</a>
+    </footer>
+</body>
+</html>
