@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+13px&family=Story+Script&display=swap');
+body {
+    background-image: url(./bilder/zbynek-burival-1kGvoC9g2DY-unsplash.jpg);
+    background-size: cover;
+}
+h1 {
+    font-family: "Story Script", sans-serif;
+    color: white;
+    font-size: 60px;
+    margin-left: 300px;
+}
+h2 {
+    font-family: "Slabo 13px", serif;
+    color: white;
+    font-size: 30px;
+    margin-left: 300px;
+}
+p {
+    font-family: "Slabo 13px", serif;
+    color: white;
+    font-size: 20px;
+    margin-left: 300px;
+    background-color: #16c2fb54;
+    width: 650px;
+    padding: 30px;
+    border-radius: 20px;
+}
+a {}
