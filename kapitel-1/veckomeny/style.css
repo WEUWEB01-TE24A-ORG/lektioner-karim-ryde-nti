@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Offside&display=swap');
+
+body {}
+table {
+    background-color: #c6b5b5;
+}
+caption {
+    background-image: url(./bilder/meg-Qk9P5enO8T4-unsplash.jpg);
+    font-size: 55px;
+    padding: 20px;
+    font-family: "Offside", sans-serif;
+}
+tr {}
+th {
+    font-size: 30px;
+    padding: 10px;
+    font-family: "Cabin", sans-serif;
+}
+td {
+    font-size: 14px;
+    padding: 20px;
+    font-family: "Cabin", sans-serif;
+}
+img {
+    width: 250px;
+}
