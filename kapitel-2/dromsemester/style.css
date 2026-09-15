@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+body {
+    background-image: url(./bilder/hrvoje_photography-IZnFV-bq_wY-unsplash.jpg);
+    background-size: cover;
+}
+h1 {
+    color: azure;
+    font-family: "Boogaloo", sans-serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 0 rgb(214, 101, 101);
+    margin-left: 400px;
+}
+h2 {
+    color: azure;
+    font-family: "Boogaloo", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 rgb(214, 101, 101);
+    margin-left: 400px;
+}
+p {
+    margin-left: 1000px;
+    margin-top: 300px;
+}
+a {
+    color: azure;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    background-color: #e57171;
+    padding: 10px 50px 10px 50px;
+    border-radius: 5px;
+}
