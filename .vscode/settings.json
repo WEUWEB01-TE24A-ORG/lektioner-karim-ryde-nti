@@ -39,4 +39,6 @@
     "angelo-breuer.clock": true,
     "GitHub.copilot": false
   },
+  "chat.disableAIFeatures": true,
+  "workbench.experimental.modernUI": false
 }
