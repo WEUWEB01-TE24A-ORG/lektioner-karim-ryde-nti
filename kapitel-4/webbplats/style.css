@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
 /* Enkel CSS-reset */
 html {
     box-sizing: border-box;
@@ -12,4 +14,66 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 img {
     max-width: 100%;
     height: auto;
+}
+/* Sidans utseende */
+body {
+    background-color: #736262;
+}
+.kontainer {
+    background-color: #fff;
+    width: 800px;
+    margin: auto;
+    padding: 30px;
+}
+/* Sidhuvudets utseende */
+header {
+
+    h1 {
+        font-family: "Kavoon", serif;
+        font-size: 60px;
+        text-align: center;
+    }
+    nav {
+        margin-top: 15px;
+        text-align: center;
+        a {
+            background-color: #d26767;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px;
+            max-width: 100px;
+        }
+        a:hover {
+            background-color: #748daa;
+        }
+        a.aktiv {
+            background-color: #748daa;
+        }
+    }
+}
+main {
+    h2 {
+        text-align: center;
+    }
+    figure {
+        width: 400px;
+        padding: 20px;
+        background-color: #b2b596;
+        margin: auto;
+        text-align: center;
+        img {
+
+        }
+        figcaption {
+
+        }
+        p {
+
+        }
+    }
+}
+footer {
+    p {
+
+    }
 }
